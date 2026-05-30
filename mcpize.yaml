@@ -1,0 +1,26 @@
+# MCPize Configuration
+# Docs: https://mcpize.com/docs/mcpize-yaml
+
+version: 1
+
+name: "Viral Radar"
+slug: "viral-radar"
+
+runtime: typescript
+entry: "dist/index.js"
+
+build:
+  install: "npm install"
+  command: "npm run build"
+
+start:
+  type: stdio
+  command: "node"
+  args:
+    - "dist/index.js"
+
+bridge:
+  mode: stdio
+
+credentials:
+  - name: "TWITTERAPI_IO_KEY"
