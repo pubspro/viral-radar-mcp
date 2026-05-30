@@ -1,0 +1,36 @@
+{
+  "name": "viral-radar-mcp",
+  "version": "0.1.0",
+  "description": "Cross-platform viral content finder MCP server. Research-only: aggregates and ranks trending posts across Reddit, Hacker News, and X by a unified virality score.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "viral-radar-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "viral",
+    "social-media",
+    "trends",
+    "reddit",
+    "hacker-news",
+    "twitter"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
