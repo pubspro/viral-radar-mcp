@@ -8,6 +8,13 @@ see what is taking off across networks at a glance.
 > **Read-only.** This server never posts, replies to, or modifies anything on
 > any platform. It is a pure research/intelligence tool.
 
+> **X/Twitter requires your own API key.** Reddit and Hacker News work out of
+> the box with no key. The X/Twitter tools only work if you supply your own
+> `TWITTERAPI_IO_KEY` (from twitterapi.io) — each subscriber brings their
+> own key, so you are never charged for someone else's X usage. If no key is
+> set, the server still works fully for Reddit and Hacker News and simply skips
+> X results.
+
 ## Why this exists
 
 Most social MCP servers are either deep on a single platform or are bare
@@ -39,7 +46,7 @@ API keys are read from environment variables. **No keys are hardcoded.**
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `TWITTERAPI_IO_KEY` | Only for X/Twitter | API key from twitterapi.io. If unset, X results are skipped gracefully. |
+| `TWITTERAPI_IO_KEY` | Only for X/Twitter | Your own API key from twitterapi.io. If unset, X results are skipped gracefully and Reddit + Hacker News still work fully. |
 | `VIRAL_RADAR_USER_AGENT` | No | Custom User-Agent string for outbound requests. |
 
 Reddit and Hacker News use public read-only endpoints and need no key.
@@ -58,8 +65,9 @@ MCP-compatible client (Claude, Cursor, VS Code, Windsurf, etc.).
 ## Deploying on MCPize
 
 This repo is structured for MCPize GitHub auto-deploy. In the MCPize dashboard,
-choose **New Server -> GitHub Repo**, select `pubspro/viral-radar-mcp`, and
-add your `TWITTERAPI_IO_KEY` in the deploy environment settings.
+choose **New Server -> GitHub Repo**, select `pubspro/viral-radar-mcp`. The
+X/Twitter key is configured as **user-provided**, so each subscriber adds their
+own `TWITTERAPI_IO_KEY`.
 
 ## License
 
