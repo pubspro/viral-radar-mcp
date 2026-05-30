@@ -1,4 +1,5 @@
 # viral-radar-mcp
+[![MCPize](https://mcpize.com/badge/@pubspro/viral-radar)](https://mcpize.com/mcp/viral-radar)
 
 Cross-platform **viral content finder** MCP server. Research-only: it aggregates
 trending and viral posts across **Reddit**, **Hacker News**, and **X/Twitter**,
@@ -7,6 +8,16 @@ see what is taking off across networks at a glance.
 
 > **Read-only.** This server never posts, replies to, or modifies anything on
 > any platform. It is a pure research/intelligence tool.
+
+## Connect via MCPize
+
+Use this MCP server instantly with no local installation:
+
+```bash
+npx -y mcpize connect @pubspro/viral-radar --client claude
+```
+
+Or connect at: **https://mcpize.com/mcp/viral-radar**
 
 ## Why this exists
 
